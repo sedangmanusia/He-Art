@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    >
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <table align="center">
+                <tr>
+                    <td align="right">
+                        <img src="logo.jpg" alt="Logo Website Seni" width = 50px align = "center">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class = "login">
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class = "menu">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#artist">Artists</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <main>
+        <section class="description">
+            <h1 align = "center">Welcome to He!Art</h1>
+            <p align = "center">Tempat dimana kata-kata menjadi warna dan pikiran menjadi bentuk. Mencipta mahakarya yang memukau senantiasa. Di sini, Anda akan menemukan beragam karya dari seniman-seniman berbakat dari seluruh penjuru. Dari goresan kuas yang mengungkapkan emosi hingga potret yang merayakan keindahan. </p>
+            <h4 align="center">Join our community of artists and art enthusiasts</h4>
+        </section>
+        <section class="gallery">
+            <div class="card" onclick="goToArtistProfile('artist1')">
+                <img src="Picture/Affandi (1907-1990) , Self Portrait  _ Christie's.jpeg" alt="Artwork 1">
+                <div class="details">
+                    <h3>Self Portrait</h3>
+                    <p>by <span class="artist" data-artist="artist1">Affandi</span></p>
+                </div>
+            </div>
+            <div class="card" onclick="goToArtistProfile('artist2')">
+                <img src="Picture/AFFANDI (Indonesia 1907-1990) , Javanese dancer  _ Christie's.jpeg" alt="Artwork 2">
+                <div class="details">
+                    <h3>Jvanese Dancer</h3>
+                    <p>by <span class="artist" data-artist="artist2">Affandi</span></p>
+                </div>
+            </div>
+            <div class="card" onclick="goToArtistProfile('artist2')">
+                <img src="Picture/KUSUMA AFFANDI (1907_1990), INDONESIAN ABSTRACT_EXPRESSIONIST PAINTER - Meeting  Benches (1).jpeg" alt="Artwork 2">
+                <div class="details">
+                    <h3>Indonesian Abstract Expresionist Painter</h3>
+                    <p>by <span class="artist" data-artist="artist2">Affandi</span></p>
+                </div>
+            </div>
+            <!-- Add more cards here -->
+        </section>
+    </main>
+    <footer align = "center">
+        <p>Copyright © He!Art 2024 </p>
+    </footer>
+    <script>
+        function goToArtistProfile(artistId) {
+            // Simulate navigation to artist profile page based on artistId
+            alert("Navigating to artist profile: " + artistId);
+            // You can replace the alert with actual navigation code
+        }
+    </script>
+</body>
+</html>
