@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
-      rel="stylesheet"
-    >
+      rel="stylesheet">
 </head>
 <body>
     <header>
@@ -47,6 +46,8 @@
             <h4 align="center">Join our community of artists and art enthusiasts</h4>
         </section>
         <section class="gallery">
+            <div class = "carousel">
+                <div class="cards-container">
             <div class="card" onclick="goToArtistProfile('artist1')">
                 <img src="Picture/Affandi (1907-1990) , Self Portrait  _ Christie's.jpeg" alt="Artwork 1">
                 <div class="details">
@@ -68,18 +69,77 @@
                     <p>by <span class="artist" data-artist="artist2">Affandi</span></p>
                 </div>
             </div>
+            <div class="card" onclick="goToArtistProfile('artist2')">
+                <img src="Picture/Roby Dwi Antono _ Autopsy of Mystery.jpeg" alt="Artwork 2">
+                <div class="details">
+                    <h3>Autopsy of Mystery</h3>
+                    <p>by <span class="artist" data-artist="artist2">Roby Dwi Antono</span></p>
+                </div>
+            </div>
+            <div class="card" onclick="goToArtistProfile('artist2')">
+                <img src="Picture/Roby Dwi Antono_ Mengemas Rupa.jpeg" alt="Artwork 2">
+                <div class="details">
+                    <h3>Mengemas Rupa</h3>
+                    <p>by <span class="artist" data-artist="artist2">Roby Dwi Antono</span></p>
+                </div>
+            </div>
+            <div class="card" onclick="goToArtistProfile('artist2')">
+                <img src="Picture/Roby Dwi Antono_ Waktu Membatu.jpeg" alt="Artwork 2">
+                <div class="details">
+                    <h3>Waktu Membatu</h3>
+                    <p>by <span class="artist" data-artist="artist2">Roby Dwi Antono</span></p>
+                </div>
+            </div>
             <!-- Add more cards here -->
+        </div>
+        </div>
+        <button class="prev" onclick="moveCarousel(-1)">❮</button>
+        <button class="next" onclick="moveCarousel(1)">❯</button>
         </section>
     </main>
     <footer align = "center">
         <p>Copyright © He!Art 2024 </p>
     </footer>
     <script>
-        function goToArtistProfile(artistId) {
-            // Simulate navigation to artist profile page based on artistId
-            alert("Navigating to artist profile: " + artistId);
-            // You can replace the alert with actual navigation code
-        }
+       document.addEventListener("DOMContentLoaded", function() {
+    // Mengambil elemen h4 menggunakan DOM
+    var joinCommunityText = document.querySelector('h4');
+
+    // Mengubah bentuk kursor menjadi tangan saat kursor masuk ke teks pada h4
+    joinCommunityText.addEventListener('mouseenter', function() {
+        joinCommunityText.style.cursor = 'pointer';
+    });
+
+    // Mengarahkan pengguna ke halaman login saat teks pada h4 diklik
+    joinCommunityText.addEventListener('click', function() {
+        window.location.href = 'login.html';
+    });
+});
     </script>
+<!--script carousel-->
+<script>
+    var currentIndex = 0;
+var cards = document.querySelectorAll('.card');
+
+function moveCarousel(n) {
+    currentIndex += n;
+    showCards();
+}
+
+function showCards() {
+    var visibleCards = 3; // Menentukan jumlah kartu yang ditampilkan
+    var lastIndex = cards.length - visibleCards;
+
+    if (currentIndex < 0) {
+        currentIndex = 0;
+    } else if (currentIndex > lastIndex) {
+        currentIndex = lastIndex;
+    }
+
+    var translateValue = -currentIndex * (cards[0].offsetWidth + 20); // Menghitung nilai translasi
+    document.querySelector('.cards-container').style.transform = 'translateX(' + translateValue + 'px)';
+}
+</script>
+
 </body>
 </html>

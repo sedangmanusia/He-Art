@@ -108,13 +108,16 @@ main {
     text-decoration: underline;
 }
 
-
-/* Footer styles */
 footer {
-    background-color: #064b70;
+    position: fixed; /* Menetapkan posisi footer */
+    bottom: 0; /* Memposisikan footer di bagian bawah layar */
+    width: 100%; /* Menyesuaikan lebar footer dengan lebar layar */
     color: #fff;
-    padding: 20px 0;
+    background-color: #064b70; /* Warna latar belakang footer */
+    padding: 20px; /* Padding untuk ruang di dalam footer */
+    text-align: center; /* Pusatkan konten dalam footer */
 }
+
 
 /* Responsiveness */
 @media screen and (max-width: 768px) {
@@ -144,3 +147,47 @@ footer {
         width: calc(50% - 20px);
     }
 }
+
+/* carousel */
+.gallery {
+    overflow: hidden; /* Menyembunyikan konten yang melebihi batas */
+}
+
+.carousel {
+    display: flex; /* Membuat elemen carousel menjadi flex container */
+    overflow-x: scroll; /* Membuat scroll horizontal */
+    scroll-snap-type: x mandatory; /* Membuat kartu bergulir satu per satu */
+    padding-bottom: 20px; /* Menambahkan ruang di bawah carousel */
+}
+
+.cards-container {
+    display: flex; /* Membuat container kartu menjadi flex */
+    scroll-snap-type: x mandatory; /* Membuat kartu bergulir satu per satu */
+}
+
+.card {
+    flex: 0 0 auto; /* Membuat lebar kartu tetap */
+    margin-right: 20px; /* Menambahkan jarak antara kartu */
+    scroll-snap-align: start; /* Mengatur titik align untuk scroll snap */
+}
+
+.prev, .next {
+    position: absolute; /* Membuat posisi absolut untuk tombol panah */
+    top: 50%; /* Menempatkan tombol panah di tengah secara vertikal */
+    transform: translateY(-50%); /* Menggeser tombol panah agar benar-benar di tengah */
+    z-index: 1; /* Mengatur z-index agar tombol panah muncul di atas kartu */
+    background-color: rgba(255, 255, 255, 0.5); /* Memberikan latar belakang semi-transparan */
+    border: none; /* Menghilangkan border */
+    cursor: pointer; /* Mengubah kursor saat diarahkan ke tombol panah */
+}
+
+.prev {
+    left: 0; /* Menempatkan tombol panah prev di kiri */
+}
+
+.next {
+    right: 0; /* Menempatkan tombol panah next di kanan */
+}
+
+
+
