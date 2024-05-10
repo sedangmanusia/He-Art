@@ -54,6 +54,14 @@ input[type="submit"]:hover {
     background-color: #555;
 }
 
+.warning {
+    background-color: #ffb4b4; /* Warna latar merah muda */
+    color: #710c0c; /* Warna teks putih */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}  
+
 footer {
     background-color: #064b70;
     color: #fff;

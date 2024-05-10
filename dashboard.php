@@ -25,7 +25,7 @@
         <div class = "login">
         <nav>
             <ul>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </nav>
         </div>
