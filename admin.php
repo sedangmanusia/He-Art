@@ -24,7 +24,7 @@
               <i class="fas fa-user"></i>
               <span class="nav-item">Artist</span>
             </a></li>
-            <li><a href="input_artwork.html">
+            <li><a href="artwork/artwork.php">
               <i class="fas fa-chart-bar"></i>
               <span class="nav-item">Artwork</span>
             </a></li>
@@ -40,7 +40,7 @@
               <i class="fas fa-question-circle"></i>
               <span class="nav-item">Help</span>
             </a></li>
-            <li><a href="" class="logout">
+            <li><a href="logout.php" class="logout">
               <i class="fas fa-sign-out-alt"></i>
               <span class="nav-item">Log out</span>
             </a></li>

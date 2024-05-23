@@ -63,7 +63,11 @@ input[type="submit"]:hover {
 }  
 
 footer {
-    background-color: #064b70;
+    position: fixed; /* Menetapkan posisi footer */
+    bottom: 0; /* Memposisikan footer di bagian bawah layar */
+    width: 100%; /* Menyesuaikan lebar footer dengan lebar layar */
     color: #fff;
-    padding: 20px 0;
+    background-color: #064b70; /* Warna latar belakang footer */
+    padding: 20px; /* Padding untuk ruang di dalam footer */
+    text-align: center; /* Pusatkan konten dalam footer */
 }

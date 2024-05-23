@@ -17,6 +17,7 @@
     <main>
         <h1 align="center">Register</h1>
         <h3 align="center">"Create your account, create your own beautiful world."</h3>
+        <form action="register-proses.php" method="post">
         <table align="center">
             <tr>
                 <td align="right">
@@ -52,10 +53,11 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <input type="submit" value="Register">
+                    <input type="submit" value="Register" name="register">
                 </td>
             </tr>
         </table>
+        </form>
     </main>
 	<footer align = "center">
         <p>Copyright © He!Art 2024 </p>

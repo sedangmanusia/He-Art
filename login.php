@@ -1,27 +1,3 @@
-<?php
-    session_start();
-    $message = "";
-    if(isset($_POST["login"])){
-        if(empty($_POST["username"]) || empty($_POST["password"])){
-            $message = "<div class='warning'>Harus diisi</div>";
-    } else {
-        $email = "aku@gmail.com";
-        $password = "pass";
-
-        if($_POST["username"] == $email){
-            if($_POST["password"] == $password){
-                $_SESSION['email'] = $_POST['username'];
-                header("location: dashboard.php");
-        } else {
-            $message = "<div class='warning'>Password salah</div>";
-        } 
-        } else {
-            $message = "<div class='warning'>Email salah</div>";
-        }
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,8 +18,7 @@
         <h1 align="center">Login</h1>
         <h3 align = "center">"Seni adalah jalan bagi saya untuk mengekspresikan perasaan, mimpi, dan pandangan hidup saya."</h3>
         <h4 align = "center"> - Affandi</h4>
-        <form action = "" method = "POST">
-        <?=$message?>
+        <form action="login-proses.php" method="post">
         <table align="center">
             <tr>
                 <td align="right">
@@ -68,7 +43,7 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <p>Belum punya akun? <a href="register.html">Register</a></p>
+                    <p>Belum punya akun? <a href="register.php">Register</a></p>
                 </td>
             </tr>
         </table>

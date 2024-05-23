@@ -1,0 +1,229 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700");
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: #dfe9f5;
+  display: flex; 
+}
+.container{
+  display: flex;
+  flex-direction: row;
+}
+nav{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  background: #fff;
+  width: 280px;
+  overflow: hidden;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+}
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+a{
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 14px;
+  display: table;
+  width: 280px;
+  padding: 10px;
+}
+nav .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+a:hover{
+  background: #eee;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+/* main content */
+.home-section {
+	position: relative;
+	background: #dfe9f5;
+	min-height: 100vh;
+	width: calc(100% - 240px);
+    display: flex;
+    flex-direction: column;
+	/* left: 240px; */
+	transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section {
+	width: calc(100% - 60px);
+	left: 60px;
+}
+.home-section nav {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	width: calc(100% - 240px);
+	left: 240px;
+	z-index: 100;
+	padding: 0 20px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section nav {
+	left: 60px;
+	width: calc(100% - 60px);
+}
+.home-section nav .sidebar-button {
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	font-weight: 500;
+}
+nav .sidebar-button i {
+	font-size: 35px;
+	margin-right: 10px;
+}
+
+.home-section nav .profile-details {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f5f6fa;
+	border: 2px solid #efeef1;
+	border-radius: 6px;
+	height: 50px;
+	min-width: 190px;
+} 
+
+.table-data {
+	text-align: center;
+	border-collapse: collapse;
+	width: 100%;
+	overflow-x: auto; 
+	
+ }
+ 
+.btn-edit,
+.btn-delete {
+   padding: 8px 16px;
+   margin-right: 8px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 14px;
+   transition: background-color 0.3s;
+}
+
+.btn-edit {
+   background-color: #4caf50; /* Green */
+   color: white;
+}
+
+.btn-delete {
+   background-color: #f44336; /* Red */
+   color: white;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+   background-color: #45a049; /* Darker green */ 
+}
+
+nav .profile-details .admin_name {
+	font-size: 15px;
+	font-weight: 500;
+	color: #333;
+	white-space: nowrap;
+}
+.home-section .home-content {
+	position: relative;
+	padding-top: 104px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.btn {
+	background-color: #064b70;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btn a {
+	text-decoration: none;
+	color: white;
+}
+
+.btn-tambah {
+	margin: 10px 0;
+}
+
+.btn-simpan {
+	width: 100%;
+}
+
+.btn:hover {
+	background-color: #eba416;
+}
+
+.table-data {
+	text-align: center;
+	border-collapse: collapse;
+	width: 100%;
+}
+th, td {
+	border: 1px solid black;
+	padding: 5px 20px;
+}
+.form-login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	padding: 30px;
+	margin: 10px auto;
+	border-radius: 10px;
+}
+.input {
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid rgb(148, 148, 148);
+}
