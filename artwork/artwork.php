@@ -26,15 +26,15 @@ if ($_SESSION['username'] == null) {
 		<div class="container">
         <nav>
           <ul>
-            <li><a href="#" class="logo">
+            <li><a href="dashboard.php" class="logo">
               <img src="logo.jpg" alt="">
               <span class="nav-item">DashBoard</span>
             </a></li>
-            <li><a href="#">
+            <li><a href="admin.php">
               <i class="fas fa-home"></i>
               <span class="nav-item">Home</span>
             </a></li>
-            <li><a href="">
+            <li><a href="artist/artist.php">
               <i class="fas fa-user"></i>
               <span class="nav-item">Artist</span>
             </a></li>
@@ -76,13 +76,14 @@ if ($_SESSION['username'] == null) {
 			<button type="button" class="btn btn-tambah">
 				<a href="artwork-entry.php">Tambah Data</a>
 			</button>
+			<button class = "btn btn-render"><a href = "artwork-cetak.php">Cetak Data</a></button>
 			<table class="table-data">
 				<thead>
 					<tr>
-						<th scope="col" style="width: 20%">Photo</th>
-						<th>Categories</th>
-						<th scope="col" style="width: 30%">Description</th>
-						<th scope="col" style="width: 15%">Price</th>
+						<th scope="col" style="width: 20%">Foto</th>
+						<th>Judul</th>
+						<th scope="col" style="width: 30%">Deskripsi</th>
+						<th scope="col" style="width: 15%">Harga</th>
 						<th scope="col" style="width: 20%">Action</th>
 					</tr>
 				</thead>

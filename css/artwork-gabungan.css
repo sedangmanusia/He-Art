@@ -190,7 +190,7 @@ nav .profile-details .admin_name {
 	color: white;
 }
 
-.btn-tambah {
+.btn-tambah, btn-render {
 	margin: 10px 0;
 }
 
